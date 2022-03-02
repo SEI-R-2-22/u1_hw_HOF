@@ -83,6 +83,7 @@ function sortObjectsByValue(objs) {
    * Using .sort, sort the array of objects by the value key in ascending order
    * .sort documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    */
+  return objs.sort((a, b) => a.value - b.value)
 }
 
 module.exports = {
