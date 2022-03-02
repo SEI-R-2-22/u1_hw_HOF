@@ -5,6 +5,9 @@ function printNums(nums) {
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
+  let newArray = []
+  nums.forEach((num) => newArray.push(num))
+  return newArray
 }
 
 function returnSums(nums) {
@@ -13,6 +16,9 @@ function returnSums(nums) {
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+  let newArray = []
+  nums.forEach((num, index) => newArray.push(num + index))
+  return newArray
 }
 
 function returnTotal(objs) {
@@ -21,6 +27,11 @@ function returnTotal(objs) {
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
+  let sum = 0
+  objs.forEach((obj) => (sum = sum + obj.n))
+  // objs.forEach((obj) => (sum += obj.n))
+  return sum
+  //return objs.reduce((acc, obj) => acc + obj.n, 0) --> could this work too?
 }
 
 function printMoney(decimals) {
@@ -33,6 +44,7 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+  return decimals.map((decimal) => '$' + decimal.toFixed(2))
 }
 
 function returnAllTrueValues(values) {
@@ -40,6 +52,7 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
+  return values.filter((value) => value.happy === true)
 }
 
 function addTwo(nums) {
@@ -50,6 +63,7 @@ function addTwo(nums) {
    */
   //   3
   //   4 => 7
+  return nums.reduce((accumulator, num) => accumulator + (num + 2), 0)
 }
 
 function joinStrings(strings) {
@@ -57,6 +71,7 @@ function joinStrings(strings) {
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+  return strings.reduce((accumulator, string) => accumulator + string)
 }
 
 //Bonus
@@ -66,6 +81,10 @@ function sortObjectsByValue(objs) {
    * Using .sort, sort the array of objects by the value key in ascending order
    * .sort documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    */
+  // return objs.sort(function (x, y) {
+  //   return x.value - y.value
+  // })
+  return objs.sort((x, y) => x.value - y.value)
 }
 
 module.exports = {
