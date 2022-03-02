@@ -61,6 +61,9 @@ function addTwo(nums) {
    */
   //   3
   //   4 => 7
+  return nums.reduce((acc, num) => {
+    return acc + (num + 2)
+  }, 0)
 }
 
 function joinStrings(strings) {
