@@ -16,6 +16,9 @@ function returnSums(nums) {
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+  const newArr = []
+  nums.forEach((n, idx) => newArr.push(n + idx))
+  return newArr
 }
 
 function returnTotal(objs) {
