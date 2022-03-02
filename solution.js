@@ -1,10 +1,17 @@
 // You must RETURN your result in each function!
+//
 
 function printNums(nums) {
   /**
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
+  const arr = new Array()
+  nums.forEach((element) => {
+    arr.push(element)
+  })
+
+  return arr
 }
 
 function returnSums(nums) {
@@ -13,6 +20,11 @@ function returnSums(nums) {
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+  const arr = new Array()
+  nums.forEach((element, i) => {
+    arr.push(element + i)
+  })
+  return arr
 }
 
 function returnTotal(objs) {
@@ -21,6 +33,9 @@ function returnTotal(objs) {
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
+  let sum = 0
+  objs.forEach((element) => (sum += element.n))
+  return sum
 }
 
 function printMoney(decimals) {
@@ -33,6 +48,7 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+  return decimals.map((element) => '$' + parseFloat(element).toFixed(2))
 }
 
 function returnAllTrueValues(values) {
@@ -40,6 +56,7 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
+  return values.filter((element) => element.happy === true)
 }
 
 function addTwo(nums) {
@@ -50,6 +67,7 @@ function addTwo(nums) {
    */
   //   3
   //   4 => 7
+  return nums.reduce((a, b) => a + b + 2, 0)
 }
 
 function joinStrings(strings) {
@@ -57,6 +75,7 @@ function joinStrings(strings) {
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+  return strings.reduce((a, b) => a + b, '')
 }
 
 //Bonus
@@ -66,6 +85,7 @@ function sortObjectsByValue(objs) {
    * Using .sort, sort the array of objects by the value key in ascending order
    * .sort documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    */
+  return objs.sort((a, b) => a.value - b.value)
 }
 
 module.exports = {
