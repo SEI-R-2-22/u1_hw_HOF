@@ -50,6 +50,7 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
+  return values.filter((value) => value.happy)
 }
 
 function addTwo(nums) {
