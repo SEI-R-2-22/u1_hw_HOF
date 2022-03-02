@@ -5,6 +5,9 @@ function printNums(nums) {
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
+  const newArray = []
+  nums.forEach((num) => newArray.push(num))
+  return newArray
 }
 
 function returnSums(nums) {
@@ -13,6 +16,9 @@ function returnSums(nums) {
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+  const newArray = []
+  nums.forEach((num) => newArray.push(num + nums.indexOf(num)))
+  return newArray
 }
 
 function returnTotal(objs) {
