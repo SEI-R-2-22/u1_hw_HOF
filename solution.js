@@ -5,6 +5,9 @@ function printNums(nums) {
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
+   let nArr = []
+   nums.forEach(numb =>  nArr.push(numb)); 
+   return nArr;
 }
 
 function returnSums(nums) {
@@ -13,6 +16,11 @@ function returnSums(nums) {
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+   let nArr = []
+     nums.forEach((numb,ind) =>  {nArr.push(numb+ind)}); 
+     return nArr;
+
+
 }
 
 function returnTotal(objs) {
@@ -21,6 +29,10 @@ function returnTotal(objs) {
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
+   let sNum = 0;
+   nums.forEach((numb) =>  {sNum += numb}); 
+   return sNum;
+
 }
 
 function printMoney(decimals) {
@@ -33,6 +45,8 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+   return decimals.map(num => '$' + num.toFixed(2));
+  
 }
 
 function returnAllTrueValues(values) {
@@ -40,6 +54,8 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
+   return values.filter(hap => hap.happy);
+
 }
 
 function addTwo(nums) {
@@ -50,6 +66,8 @@ function addTwo(nums) {
    */
   //   3
   //   4 => 7
+  return nums.reduce((str,b) => str + b + 2,0)
+
 }
 
 function joinStrings(strings) {
@@ -57,6 +75,7 @@ function joinStrings(strings) {
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+   return nums.reduce((str,b) => str+b)
 }
 
 //Bonus
@@ -66,6 +85,7 @@ function sortObjectsByValue(objs) {
    * Using .sort, sort the array of objects by the value key in ascending order
    * .sort documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    */
+
 }
 
 module.exports = {
