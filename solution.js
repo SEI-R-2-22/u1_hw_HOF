@@ -71,6 +71,9 @@ function joinStrings(strings) {
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+  return strings.reduce((acc, string) => {
+    return acc + string
+  }, '')
 }
 
 //Bonus
