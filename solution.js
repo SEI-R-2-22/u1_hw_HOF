@@ -1,6 +1,11 @@
 // You must RETURN your result in each function!
 
 function printNums(nums) {
+  let arr = []
+  nums.forEach((num) => {
+    arr.push(num)
+  })
+  return arr
   /**
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
@@ -8,6 +13,11 @@ function printNums(nums) {
 }
 
 function returnSums(nums) {
+  let arr = []
+  nums.forEach((num, idx) => {
+    arr.push(num + idx)
+  })
+  return arr
   /**
    * Using forEach, push the sum of n plus the index
    * to a new array and return the new array
@@ -16,6 +26,11 @@ function returnSums(nums) {
 }
 
 function returnTotal(objs) {
+  let sum = 0
+  objs.forEach((num) => {
+    sum = sum + num.n
+  })
+  return sum
   /**
    * Using forEach return a number that is the total sum of all numbers in the array of objects.
    * The key for each object will be n
@@ -24,6 +39,10 @@ function returnTotal(objs) {
 }
 
 function printMoney(decimals) {
+  let money = decimals.map((num) => {
+    return '$' + num.toFixed(2)
+  })
+  return money
   /**
    * @param decimals => [2.30, 2.40, 32.99]
    * Using .map, return an array of decimals formatted as dollars.
@@ -36,6 +55,8 @@ function printMoney(decimals) {
 }
 
 function returnAllTrueValues(values) {
+  let emotional = values.filter((emotion) => emotion.happy === true)
+  return emotional
   /**
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
@@ -43,6 +64,10 @@ function returnAllTrueValues(values) {
 }
 
 function addTwo(nums) {
+  let math = nums.reduce((acc, num) => {
+    return acc + (num + 2)
+  }, 0)
+  return math
   /**
    * @param nums => [1,2,3,4]
    * Using .reduce, return the total sum of all numbers.
@@ -53,6 +78,10 @@ function addTwo(nums) {
 }
 
 function joinStrings(strings) {
+  let words = strings.reduce((acc, string) => {
+    return acc + string
+  })
+  return words
   /**
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
@@ -61,6 +90,10 @@ function joinStrings(strings) {
 
 //Bonus
 function sortObjectsByValue(objs) {
+  let sorting = objs.sort(function (a, b) {
+    return a.value - b.value
+  })
+  return sorting
   /**
    * @param objs => [{value: 1}, {value:2}, {value:23}]
    * Using .sort, sort the array of objects by the value key in ascending order
