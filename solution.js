@@ -42,6 +42,7 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+  return decimals.map((decimal) => `$${decimal.toFixed(2)}`)
 }
 
 function returnAllTrueValues(values) {
