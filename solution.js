@@ -27,6 +27,9 @@ function returnTotal(objs) {
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
+  let sum = 0
+  objs.forEach((num) => (sum = sum + num.n))
+  return sum
 }
 
 function printMoney(decimals) {
