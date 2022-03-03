@@ -5,6 +5,11 @@ function printNums(nums) {
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
+  let numbers = []
+  nums.forEach((a) => {
+    numbers.push(a)
+  })
+  return numbers
 }
 
 function returnSums(nums) {
@@ -13,6 +18,12 @@ function returnSums(nums) {
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+  let numbers = []
+  nums.forEach((a, b) => {
+    sum = a + b
+    numbers.push(sum)
+  })
+  return numbers
 }
 
 function returnTotal(objs) {
@@ -21,6 +32,11 @@ function returnTotal(objs) {
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
+  let sumNum = 0
+  const numbers = objs.forEach((a) => {
+    sumNum = sumNum + a.n
+  })
+  return sumNum
 }
 
 function printMoney(decimals) {
@@ -33,6 +49,7 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+  return decimals.map((decimal) => '$' + decimal.toFixed(2))
 }
 
 function returnAllTrueValues(values) {
@@ -40,6 +57,7 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
+  return values.filter((value) => value.happy === true)
 }
 
 function addTwo(nums) {
@@ -49,7 +67,10 @@ function addTwo(nums) {
    * Each number should have 2 added to it.
    */
   //   3
-  //   4 => 7
+  // //   4 => 7
+  return nums.reduce((sum, number) => {
+    return sum + number + 2
+  }, 0)
 }
 
 function joinStrings(strings) {
@@ -57,6 +78,8 @@ function joinStrings(strings) {
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+  let combiningStrings = strings.reduce((a, b) => a + b)
+  return combiningStrings
 }
 
 //Bonus
@@ -66,6 +89,7 @@ function sortObjectsByValue(objs) {
    * Using .sort, sort the array of objects by the value key in ascending order
    * .sort documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    */
+  return objs.sort((a, b) => a.value - b.value)
 }
 
 module.exports = {
