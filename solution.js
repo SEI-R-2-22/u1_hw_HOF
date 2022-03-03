@@ -87,6 +87,13 @@ function returnAllTrueValues(values) {
 }
 
 function addTwo(nums) {
+
+  const sum = nums.reduce((acc, num) => {
+    num += 2;
+    return acc + num
+  },0)
+
+  return sum;
   /**
    * @param nums => [1,2,3,4]
    * Using .reduce, return the total sum of all numbers.
