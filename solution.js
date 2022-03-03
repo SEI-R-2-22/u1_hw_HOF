@@ -1,13 +1,30 @@
 // You must RETURN your result in each function!
 
-function printNums(nums) {
+
+let printNums = () => printNums.forEach((element) => {
+    return(element);
+
+  let nums = [1, 2, 3, 4];
+  const newNum = nums.reduce(function(a, b) {
+    return a + b;
+  }, 0)
+
+console.log(newNum)
   /**
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
-}
+})
 
 function returnSums(nums) {
+
+  let initialValue = 0;
+  let arr = nums.forEach((element) => {
+    return sum = arr.reduce(nums, element) => num + element, initialValue;
+})
+
+console.log(sum);
+
   /**
    * Using forEach, push the sum of n plus the index
    * to a new array and return the new array
@@ -23,7 +40,12 @@ function returnTotal(objs) {
    */
 }
 
-function printMoney(decimals) {
+const printMoney = () => {
+  const printMoneys = printMoney.map(() => {
+    const newMoney = ("$" + printMoney * 0.10)
+    return newMoney
+
+  
   /**
    * @param decimals => [2.30, 2.40, 32.99]
    * Using .map, return an array of decimals formatted as dollars.
@@ -35,12 +57,17 @@ function printMoney(decimals) {
    */
 }
 
-function returnAllTrueValues(values) {
-  /**
-   * @param values => [{name: 'Joe', happy:false}]
-   * Using .filter, return an array of objects where happy equals true
-   */
-}
+  const values => {
+      let arr = values.filter((obj) => {
+        return obj.happy === 'true';
+      });
+      return obj.happy === 'true';
+
+      /**
+       * @param values => [{name: 'Joe', happy:false}]
+       * Using .filter, return an array of objects where happy equals true
+       */
+    }
 
 function addTwo(nums) {
   /**
@@ -53,6 +80,8 @@ function addTwo(nums) {
 }
 
 function joinStrings(strings) {
+
+
   /**
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
