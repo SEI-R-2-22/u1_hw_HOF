@@ -3,7 +3,7 @@
 function printNums(nums) {
 
   const array = []
-  numbers.forEach((el) => {
+  nums.forEach((el) => {
     array.push(el)
   })
   return array 
@@ -18,7 +18,7 @@ function printNums(nums) {
 
 function returnSums(nums) {
   const array = []
-  numbers.forEach((n, index) => {
+  nums.forEach((num, index) => {
     array.push(num + index)
   })
   return array
@@ -30,23 +30,6 @@ function returnSums(nums) {
    * @param nums => [1,2,3,4,5]
    */
 }
-let numbers2 = []
- numbers2.forEach( (n,index) => {
-  numbers2.push(n + index)
-})
-const obj1 = {
-  num: 1
-}
-
-  const obj2 = {
-    num: 2
-  }
-
-    const obj3 = {
-      num: 3
-  
-}
-const objArray = [obj1, obj2, obj3]
 
 function returnTotal(objs) {
   ////////////////////////////////////////////////////////////////////
@@ -55,19 +38,39 @@ function returnTotal(objs) {
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
-  let newNumber = 0;
-  objs.reduce((number, value) => {
-return number + value.n
-  } ).forEach((numbers) => {
-    newNumber.push(numbers)
+//   let newNumber = 0;
+//   objs.reduce((number, value) => {
+// return number + value.n
+//   } ).forEach((numbers) => {
+//     newNumber.push(numbers)
+//   })
+// return newNumber
+
+// const sum = 0
+//   objs.forEach((num) => {
+//     sum = sum + num.n
+//   })
+//   return sum
+
+let sum = 0
+  objs.forEach((num) => {
+    sum = sum + num.n
   })
-return newNumber
+  return sum
+
+
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
+// function printMoney(decimals) {
+//   let money = decimals.map((numbers) => {
+//   return '$' + numbers.toFixed(2)
+//   })
+//   return $
+
 function printMoney(decimals) {
-  let money = decimals.map((numbers) => {
-  return 'money' + numbers.toFixed(2)
+  let money = decimals.map((num) => {
+  return '$' + num.toFixed(2)
   })
   return money
 
@@ -84,9 +87,19 @@ function printMoney(decimals) {
 // pull array using map function 
 // arrange array when map
 
+// function returnAllTrueValues(values) {
+//  const happy = values.filter((feeling) => feeling.happy === true)
+//  return feeling
+
+// function returnAllTrueValues(values) {
+//   const happy = values.filter((emotion) => emotion.happy === true)
+//   return emotion
+
 function returnAllTrueValues(values) {
- const happy = values.fliter((feeling) => feeling.happy === true)
- return feeling
+  const happy = values.filter((value) => {
+    return value.happy === true
+  })
+  return happy 
  ////////////////////////////////////////////////////////////////////////
   /**
    * @param values => [{name: 'Joe', happy:false}]
@@ -111,9 +124,14 @@ function addTwo(nums) {
 }
 ///////////////////////////////////////////////////////////////////////
 
+// function joinStrings(strings) {
+//   const words = strings.reduce((accumulator, value) => {
+//     return accumulator + strings
+//   })
+//   return words
 function joinStrings(strings) {
-  const words = strings.reduce((accumulator, value) => {
-    return accumulator + strings
+  const words = strings.reduce((accumulator, string) => {
+    return accumulator + string
   })
   return words
   /**
@@ -124,8 +142,8 @@ function joinStrings(strings) {
 ///////////////////////////////////////////////////////////////////////////
 //Bonus
 function sortObjectsByValue(objs) {
-  const sorting = objs.sort(function (obj1,obj2) {
-return  obj1.value - obj2.value
+  const sorting = objs.sort(function (a, b) {
+    return a.value - b.value
   })
   return sorting
 
