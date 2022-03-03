@@ -31,14 +31,18 @@ function returnSums(nums) {
 }
 
 function returnTotal(objs) {
-    // const newArray = []
     let sum = 0;
-    objs.forEach((n) => {
-      if (objs.n !== NaN) {
-      sum += objs.n;
-      }
+    objs.forEach((obj) => {
+      sum+=obj.n;
     })
     return sum;
+
+
+
+    
+    
+     
+    
   /**
 
    * 
