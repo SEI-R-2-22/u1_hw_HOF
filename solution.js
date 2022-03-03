@@ -1,9 +1,14 @@
-// You must RETURN your result in each function!
+// // You must RETURN your result in each function!
 
-function printNums(nums) {
+function printNums (nums) {
+let newNums = [];
+nums.forEach((a) => {
+newNums.push(a)
+})
+return newNums
   /**
    *  Using .forEach, add each number in the nums array to a new array.
-   * @param nums => [1,2,3,4]
+   *     @param nums => [1,2,3,4]
    */
 }
 
@@ -13,17 +18,35 @@ function returnSums(nums) {
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+  let newNums = []
+  nums.forEach((n, index) => {
+    sum = n + index
+    newNums.push(sum)
+  })
+  return newNums
 }
 
+
 function returnTotal(objs) {
+let sum = 0
+objs.forEach((object) => {
+  sum += object.n
+})
+return sum
   /**
    * Using forEach return a number that is the total sum of all numbers in the array of objects.
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
+ 
 }
 
 function printMoney(decimals) {
+  let dec = []
+  decimals.map(value => {
+    dec.push('$' + value.toFixed(2))
+  })
+  return dec
   /**
    * @param decimals => [2.30, 2.40, 32.99]
    * Using .map, return an array of decimals formatted as dollars.
@@ -33,9 +56,14 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+
 }
 
 function returnAllTrueValues(values) {
+  const happy = values.filter((value) => {
+    return value.happy === true
+  })
+  return happy 
   /**
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
@@ -43,6 +71,10 @@ function returnAllTrueValues(values) {
 }
 
 function addTwo(nums) {
+  let sum = nums.reduce((accumulator, value) =>{
+    return accumulator + value + 2 
+  },0)
+  return sum
   /**
    * @param nums => [1,2,3,4]
    * Using .reduce, return the total sum of all numbers.
@@ -53,6 +85,9 @@ function addTwo(nums) {
 }
 
 function joinStrings(strings) {
+  return strings.reduce((accumulator, value) => {
+    return accumulator + value
+  })
   /**
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
