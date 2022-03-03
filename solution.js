@@ -91,10 +91,6 @@ function printMoney(decimals) {
 //  const happy = values.filter((feeling) => feeling.happy === true)
 //  return feeling
 
-// function returnAllTrueValues(values) {
-//   const happy = values.filter((emotion) => emotion.happy === true)
-//   return emotion
-
 function returnAllTrueValues(values) {
   const happy = values.filter((value) => {
     return value.happy === true
