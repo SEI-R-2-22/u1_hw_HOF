@@ -104,6 +104,11 @@ function addTwo(nums) {
 }
 
 function joinStrings(strings) {
+
+  const newString = strings.reduce((simString, string) => {
+    return simString += string;
+  },"")
+  return newString;
   /**
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
