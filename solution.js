@@ -42,6 +42,7 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+  return decimals.map((num) => `$${num.toFixed(2)}`)
 }
 
 function returnAllTrueValues(values) {
@@ -49,6 +50,7 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
+  return values.filter((word) => word.happy === true)
 }
 
 function addTwo(nums) {
@@ -59,6 +61,7 @@ function addTwo(nums) {
    */
   //   3
   //   4 => 7
+  return nums.reduce((acc, val) => val + 2 + acc, 0)
 }
 
 function joinStrings(strings) {
@@ -66,6 +69,7 @@ function joinStrings(strings) {
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+  return strings.reduce((acc, val) => acc + val, '')
 }
 
 //Bonus
@@ -75,6 +79,10 @@ function sortObjectsByValue(objs) {
    * Using .sort, sort the array of objects by the value key in ascending order
    * .sort documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    */
+  let newArray = objs.sort((a, b) => {
+    return a.value - b.value
+  })
+  return newArray
 }
 
 module.exports = {
