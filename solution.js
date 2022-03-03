@@ -1,29 +1,60 @@
 // You must RETURN your result in each function!
+//////////////////////1
+ testArr = [1, 2, 3, 4, 5]
+moneyArr = [2.30, 2.40, 32.99]
 
-function printNums(nums) {
+ function printNums(nums) {
+  let printedNums = []
+  nums.forEach(num => {
+    printedNums.push(num)
+  })
+  return printedNums
+ };
+console.log(printNums(testArr))
   /**
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
-}
 
+///////////////////2
 function returnSums(nums) {
+  let newArr =[]
+  nums.forEach((number,index) => 
+    newArr.push(number + index++))
+  return newArr
+}
+console.log(returnSums(testArr))
   /**
    * Using forEach, push the sum of n plus the index
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
-}
 
+
+///////////////////3
 function returnTotal(objs) {
+  let newSum = 0
+  objs.forEach((element) => {newSum += element })
+  return newSum
+}
+console.log(returnTotal(testArr))
   /**
    * Using forEach return a number that is the total sum of all numbers in the array of objects.
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
-}
 
+
+//////////////////4
 function printMoney(decimals) {
+  testArr = []
+  decimals.map (float => {
+    dollarAmount = '$' + float.toFixed(2)
+    testArr.push(dollarAmount)
+  })
+  return testArr
+}
+console.log(printMoney(moneyArr))
   /**
    * @param decimals => [2.30, 2.40, 32.99]
    * Using .map, return an array of decimals formatted as dollars.
@@ -33,31 +64,51 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
-}
 
-function returnAllTrueValues(values) {
+
+//////////////5
+
+
+values = [{name: 'Joe', happy:false }]
+const returnAllTrueValues = values.filter((values) => {
+  values.happy = true
+    return values 
+})
+// console.log(returnAllTrueValues)
   /**
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
-}
 
-function addTwo(nums) {
-  /**
+
+////////////////////6
+const addTwo = nums.reduce((a, b) => {
+  return a + b + 2    
+  
+}, 0)
+console.log(addTwo)
+
+/**
    * @param nums => [1,2,3,4]
    * Using .reduce, return the total sum of all numbers.
    * Each number should have 2 added to it.
    */
   //   3
   //   4 => 7
-}
 
-function joinStrings(strings) {
+
+///////////////////7
+
+strings => ['g', 'f', 'z']
+const joinStrings = strings.reduce((a, b) =>  {
+})
+console.log(joinStrings)
+
   /**
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
-}
+
 
 //Bonus
 function sortObjectsByValue(objs) {
