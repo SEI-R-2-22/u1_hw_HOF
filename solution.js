@@ -96,7 +96,10 @@ function returnAllTrueValues(values) {
 
 function addTwo(nums) {
   
- return numbers.reduce((a,b) => a+b+2,0)
+  const sum = nums.reduce((accumulator, value) => {
+    return accumulator + value + 2
+  }, 0)
+  return sum
 
   /**
    * @param nums => [1,2,3,4]
@@ -107,11 +110,12 @@ function addTwo(nums) {
   //   4 => 7
 }
 ///////////////////////////////////////////////////////////////////////
+
 function joinStrings(strings) {
-  const words = strings.reduce ((acc,string)=> {
-    return accumulator && string
+  const words = strings.reduce((accumulator, value) => {
+    return accumulator + strings
   })
-  return strings & words 
+  return words
   /**
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
@@ -120,10 +124,10 @@ function joinStrings(strings) {
 ///////////////////////////////////////////////////////////////////////////
 //Bonus
 function sortObjectsByValue(objs) {
-  const sort = obj.sort(function (obj1,obj2) {
-return  obj1.val - obj2.val
+  const sorting = objs.sort(function (obj1,obj2) {
+return  obj1.value - obj2.value
   })
-  return sort
+  return sorting
 
 
   /**
