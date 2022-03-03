@@ -5,6 +5,11 @@ function printNums(nums) {
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
+  newArr = [];
+  nums.forEach((num) => {
+    newArr.push(num) 
+  })
+  return newArr;
 }
 
 function returnSums(nums) {
@@ -13,6 +18,11 @@ function returnSums(nums) {
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+newArr = [];
+nums.forEach((num, idx) => {
+  newArr.push(num+idx)
+})
+return newArr
 }
 
 function returnTotal(objs) {
@@ -21,7 +31,15 @@ function returnTotal(objs) {
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
+  sum = 0;
+  objs.forEach((num) => {
+    sum = sum + num.n;
+  })
+  return sum;
+ 
 }
+
+
 
 function printMoney(decimals) {
   /**
@@ -33,6 +51,13 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+
+  dollars = decimals.map((money) =>{
+    words = money.toFixed(2).toString();
+    return (`$${words}`) 
+  })
+
+  return dollars
 }
 
 function returnAllTrueValues(values) {
@@ -40,7 +65,13 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
+
+  solution = values.filter((word) => {return word.happy === true  })
+
+  return solution
 }
+
+
 
 function addTwo(nums) {
   /**
@@ -50,6 +81,11 @@ function addTwo(nums) {
    */
   //   3
   //   4 => 7
+
+  sum = nums.reduce((accumulator, value) => {
+    return accumulator + (value+2);
+  })
+  return sum;
 }
 
 function joinStrings(strings) {
@@ -57,6 +93,12 @@ function joinStrings(strings) {
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+
+  solution = strings.reduce((accumulator, string) => {
+    return accumulator + string 
+  })
+
+  return solution
 }
 
 //Bonus
@@ -66,6 +108,13 @@ function sortObjectsByValue(objs) {
    * Using .sort, sort the array of objects by the value key in ascending order
    * .sort documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    */
+
+  solution = objs.map((nums) => {
+    var x = nums.value
+    return x.sort();
+  })
+
+  return solution;
 }
 
 module.exports = {
