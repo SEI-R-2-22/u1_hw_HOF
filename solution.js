@@ -209,7 +209,7 @@ console.log("joinStrings: " + joinStrings(testStrings))
 
 // let valArr = [{value: 1}, {value:23}, {value:2}]
 
-// function sortObjectsByValue(objs) {
+function sortObjectsByValue(objs) {
 
 
 
@@ -236,7 +236,7 @@ console.log("joinStrings: " + joinStrings(testStrings))
    * Using .sort, sort the array of objects by the value key in ascending order
    * .sort documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    */
-// }
+}
 
 // console.log("objs: " + sortObjectsByValue(valArr));
 
