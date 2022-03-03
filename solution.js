@@ -117,6 +117,11 @@ function joinStrings(strings) {
 
 //Bonus
 function sortObjectsByValue(objs) {
+
+  const sorted = objs.sort((el1 , el2) => {
+    return el1.value - el2.value;
+  })
+  return sorted;
   /**
    * @param objs => [{value: 1}, {value:2}, {value:23}]
    * Using .sort, sort the array of objects by the value key in ascending order
