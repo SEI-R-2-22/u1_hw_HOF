@@ -28,8 +28,8 @@ function returnTotal(objs) {
    * @param objs => [{n:1}]
    */
   let sum = 0
-  objs.forEach((obj) => (sum = sum + obj.n))
-  // objs.forEach((obj) => (sum += obj.n))
+  // objs.forEach((obj) => (sum = sum + obj.n)) --> other way to write it
+  objs.forEach((obj) => (sum += obj.n))
   return sum
   //return objs.reduce((acc, obj) => acc + obj.n, 0) --> could this work too?
 }
@@ -63,7 +63,7 @@ function addTwo(nums) {
    */
   //   3
   //   4 => 7
-  return nums.reduce((accumulator, num) => accumulator + (num + 2), 0)
+  return nums.reduce((accumulator, num) => accumulator + num + 2, 0)
 }
 
 function joinStrings(strings) {
@@ -83,7 +83,7 @@ function sortObjectsByValue(objs) {
    */
   // return objs.sort(function (x, y) {
   //   return x.value - y.value
-  // })
+  // }) --> another way to write w/o in-inplicit return
   return objs.sort((x, y) => x.value - y.value)
 }
 
