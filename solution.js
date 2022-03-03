@@ -5,8 +5,9 @@ function printNums(nums) {
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
-
-   
+   newArray = []
+   nums.forEach((newArray) => {
+   }); return newArray
 }
 
 function returnSums(nums) {
@@ -35,6 +36,10 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+  let newMoney = decimals.map(function(dol)
+  {
+    return '$' + dol.toFixed(2)
+    })
 }
 
 function returnAllTrueValues(values) {
