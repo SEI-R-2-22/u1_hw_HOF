@@ -5,14 +5,26 @@ function printNums(nums) {
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
-}
+  let newArr = [];
 
+  nums.forEach( (element) => {
+    newArr.push(element)
+  })
+  return newArr;
+}
+  
 function returnSums(nums) {
   /**
    * Using forEach, push the sum of n plus the index
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+   let arrPlusIdx = [];
+
+   nums.forEach( (element, idx) => {
+     arrPlusIdx.push(element + idx)
+   })
+   return arrPlusIdx;
 }
 
 function returnTotal(objs) {
@@ -21,6 +33,12 @@ function returnTotal(objs) {
    * The key for each object will be n
    * @param objs => [{n:1}]
    */
+   let sumNumsArr = 0;
+
+   Object.keys(objs).forEach(key => {
+     sumNumsArr += objs[key]['n'];
+   })
+   return sumNumsArr;
 }
 
 function printMoney(decimals) {
@@ -33,6 +51,11 @@ function printMoney(decimals) {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+  const addDollar = decimals.map((element) => {
+    return `$${element.toFixed(2)}`
+
+  })
+  return addDollar
 }
 
 function returnAllTrueValues(values) {
@@ -40,6 +63,11 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
+  const valueToTrue = values.filter( (element) => {
+    happy=true
+
+
+  })
 }
 
 function addTwo(nums) {
@@ -50,6 +78,10 @@ function addTwo(nums) {
    */
   //   3
   //   4 => 7
+  const plus2 = nums.reduce((accumulator, value) => {
+    return ((accumulator) + (value) + 2)
+  })
+  return plus2
 }
 
 function joinStrings(strings) {
@@ -57,6 +89,10 @@ function joinStrings(strings) {
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+  const strngsJoined = strings.reduce((accumulator, value) => {
+    return accumulator + value
+  })
+  return strngsJoined
 }
 
 //Bonus
