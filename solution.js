@@ -48,7 +48,7 @@ function printMoney(decimals) {
    * each decimal with the proper decimal places. .toFixed may be useful :)
    */
     const prices = ['2.30', '2.40', '32.99'];
-    const updatedPrices = prices.map(price => '$' + price);
+    prices.map(price => '$' + price);
     console.log(updatedPrices);
    }
 
@@ -58,7 +58,7 @@ function returnAllTrueValues(values) {
    * Using .filter, return an array of objects where happy equals true
    */
   var values = [{name: 'Joe', happy:false}];
-  var emotion = values.filter(function(values){
+  values.filter(function(values){
     return values.happy = true;
   });
   console.log(emotion);
@@ -73,7 +73,7 @@ function addTwo(nums) {
   //   3
   //   4 => 7
   const numbers = [1,2,3,4];
-const addTwo = numbers.reduce((previousValue, currentValue) => {
+numbers.reduce((previousValue, currentValue) => {
   if (currentValue > 0) {
     const doubled = currentValue + 2;
     previousValue.push(doubled);
@@ -90,7 +90,7 @@ function joinStrings(strings) {
    * strings array.
    */
    const strings = ['g', 'f', 'z'];
-   const joinStrings = strings.reduce((acc, curr) => {
+   strings.reduce((acc, curr) => {
      return acc + ', ' + curr;
    });
    
