@@ -1,7 +1,7 @@
-// // You must RETURN your result in each function!
-//  const nums = [1, 2, 3, 4]
-//   const printNums = nums.forEach((num)  => {
-//     console.log(num)
+// You must RETURN your result in each function!
+ const nums = [1, 2, 3, 4]
+  const printNums = nums.forEach((num)  => {
+    console.log(num)
     
 
 
@@ -12,17 +12,17 @@
 //    * @param nums => [1,2,3,4]
 //    */
 
-// const returnSums = [1, 2, 3, 4, 5]
+const returnSums = [1, 2, 3, 4, 5]
 
-// let sum = 0;
+let sum = 0;
 
-// returnSums.forEach(item => {
+returnSums.forEach(item => {
 
-//       sum += item; 
+      sum += item; 
 
-// })
+})
   
-//      console.log(sum)
+     console.log(sum)
 
 
   
@@ -33,12 +33,12 @@
    * @param nums => [1,2,3,4,5]
    */
 
-// const myArr = [1,4,7];
-//  returnTotal.forEach(function(objs) {
+const myArr = [1,4,7];
+ returnTotal.forEach(function(objs) {
 
-//       console.log(objs.keys(arr));
+      console.log(objs.keys(arr));
 
-  
+ }
 
 //INCOMPLETE!
 //   }
@@ -74,14 +74,16 @@
 // console.log(dec)
 
 
-function returnAllTrueValues(values) {
+// function returnAllTrueValues(values) {
+
+// }
 
 
   /**
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
-}
+
 
 // function addTwo(nums) {
 //   /**
@@ -118,3 +120,4 @@ function returnAllTrueValues(values) {
 //   sortObjectsByValue,
 //   addTwo,
 //   joinStrings
+ 
