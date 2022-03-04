@@ -63,11 +63,11 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
+
   const valueToTrue = values.filter( (element) => {
-    happy=true
-
-
+    return (element['happy'] === true)
   })
+  return valueToTrue
 }
 
 function addTwo(nums) {
@@ -79,8 +79,9 @@ function addTwo(nums) {
   //   3
   //   4 => 7
   const plus2 = nums.reduce((accumulator, value) => {
-    return ((accumulator) + (value) + 2)
-  })
+    return (accumulator + value + 2)
+  }, 0)
+  console.log(plus2)
   return plus2
 }
 
@@ -102,6 +103,8 @@ function sortObjectsByValue(objs) {
    * Using .sort, sort the array of objects by the value key in ascending order
    * .sort documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    */
+  return objs.sort( (a,b) => {return(a.value - b.value)})
+  
 }
 
 module.exports = {
