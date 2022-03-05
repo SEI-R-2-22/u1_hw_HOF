@@ -1,6 +1,11 @@
 // You must RETURN your result in each function!
 
 function printNums(nums) {
+  const newNums = []
+  nums.forEach((num) => {
+    newNums.push(num)
+  })
+  return newNums
   /**
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
@@ -8,6 +13,11 @@ function printNums(nums) {
 }
 
 function returnSums(nums) {
+  const moreNewNums = []
+  nums.forEach((num, index) => {
+    moreNewNums.push((num += index))
+  })
+  return moreNewNums
   /**
    * Using forEach, push the sum of n plus the index
    * to a new array and return the new array
@@ -16,6 +26,11 @@ function returnSums(nums) {
 }
 
 function returnTotal(objs) {
+  let sum = 0
+  objs.forEach((obj) => {
+    sum += obj.n
+  })
+  return sum
   /**
    * Using forEach return a number that is the total sum of all numbers in the array of objects.
    * The key for each object will be n
@@ -24,6 +39,11 @@ function returnTotal(objs) {
 }
 
 function printMoney(decimals) {
+  const newDecimals = decimals.map((x) => parseFloat(x).toFixed(2))
+  const newMoney = newDecimals.map((x) => {
+    return '$' + x
+  })
+  return newMoney
   /**
    * @param decimals => [2.30, 2.40, 32.99]
    * Using .map, return an array of decimals formatted as dollars.
@@ -36,6 +56,8 @@ function printMoney(decimals) {
 }
 
 function returnAllTrueValues(values) {
+  const happyVals = values.filter((value) => value.happy === true)
+  return happyVals
   /**
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
@@ -43,6 +65,12 @@ function returnAllTrueValues(values) {
 }
 
 function addTwo(nums) {
+  newNums = []
+  nums.forEach((num) => {
+    newNums.push((num += 2))
+  })
+  const sum = newNums.reduce((previous, current) => previous + current)
+  return sum
   /**
    * @param nums => [1,2,3,4]
    * Using .reduce, return the total sum of all numbers.
@@ -53,6 +81,8 @@ function addTwo(nums) {
 }
 
 function joinStrings(strings) {
+  const newString = strings.reduce((previous, current) => previous + current)
+  return newString
   /**
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
