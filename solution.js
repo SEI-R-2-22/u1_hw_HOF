@@ -64,6 +64,14 @@ function printMoney(decimals) {
 }
 
 function returnAllTrueValues(values) {
+      return values.filter(value => {
+            if (value.happy === true)
+                  return (value)
+      })
+
+
+
+
       /**
        * @param values => [{name: 'Joe', happy:false}]
        * Using .filter, return an array of objects where happy equals true
@@ -71,21 +79,31 @@ function returnAllTrueValues(values) {
 }
 
 function addTwo(nums) {
-      /**
-       * @param nums => [1,2,3,4]
-       * Using .reduce, return the total sum of all numbers.
-       * Each number should have 2 added to it.
-       */
-      //   3
-      //   4 => 7
+      return nums.reduce((prev, curr) => {
+            return prev + curr + 2
+      }, 0)
 }
 
+/**
+ * @param nums => [1,2,3,4]
+ * Using .reduce, return the total sum of all numbers.
+ * Each number should have 2 added to it.
+ */
+//   3
+//   4 => 7
+
+
 function joinStrings(strings) {
-      /**
-       * @param strings => ['g', 'f', 'z']
-       * Using .reduce, return a new string containing each string from the strings array.
-       */
+      return strings.reduce((prev, curr) => {
+            return prev + curr
+      })
 }
+
+/**
+ * @param strings => ['g', 'f', 'z']
+ * Using .reduce, return a new string containing each string from the strings array.
+ */
+
 
 //Bonus
 function sortObjectsByValue(objs) {
