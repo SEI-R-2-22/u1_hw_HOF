@@ -132,7 +132,25 @@ function printMoney(decimals) {
 //use .filter to return an array with true if name is happy
 //true is a boolean
 ///////////////////////////
+///6///////////////////
+
+let nums = [1,2,3,4];
 function addTwo(nums) {
+  let nums2 = nums.map((newValue) => {
+    return newValue + 2
+  })
+  let  sum = nums2.reduce((accumulator, value) => {
+    return accumulator + value
+})
+  return sum 
+  
+  
+  
+  
+  
+  
+  
+  
   /**
    * @param nums => [1,2,3,4]
    * Using .reduce, return the total sum of all numbers.
@@ -141,15 +159,30 @@ function addTwo(nums) {
   //   3
   //   4 => 7
 }
+////////7////////////
 
+let striiiings = ['g', 'f', 'z']
 function joinStrings(strings) {
   /**
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+ let newValue = strings.reduce(( accumulator, newValue) => {
+  return accumulator + newValue 
+  })
+  return newValue 
+
+
+
+
+
+
+
 }
 
-//Bonus
+
+
+//Bonus 8///////
 function sortObjectsByValue(objs) {
   /**
    * @param objs => [{value: 1}, {value:2}, {value:23}]
