@@ -65,14 +65,10 @@ function returnAllTrueValues(values) {
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
    */
-   values.filter(function((value, index, arr) {
-     arr.pop()
-     return word === true
-   }
-
-   )
-   return 
-  
+   values.filter((value, index, arr) => {
+    arr.pop()
+    return word === true
+  }) 
 }
 
 function addTwo(nums) {
@@ -94,6 +90,13 @@ function joinStrings(strings) {
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
    */
+  
+ strings.reduce((prev, curr, index) => {
+  let string = prev + curr
+    
+   return string
+   })
+ 
 }
 
 //Bonus
