@@ -1,6 +1,10 @@
 // You must RETURN your result in each function!
 
 function printNums(nums) {
+ let newArray = []; 
+  for (let i = 0; i < nums.length; i++) {
+    newArray.push(nums[i], nums, i)
+  }
   /**
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
@@ -8,6 +12,10 @@ function printNums(nums) {
 }
 
 function returnSums(nums) {
+  let total = 0;
+  nums.forEach((num) => {
+    total += num;
+  })
   /**
    * Using forEach, push the sum of n plus the index
    * to a new array and return the new array
@@ -16,6 +24,10 @@ function returnSums(nums) {
 }
 
 function returnTotal(objs) {
+  let total = 0;
+  objs.forEach((obj) => {
+    return total += obj;
+  })
   /**
    * Using forEach return a number that is the total sum of all numbers in the array of objects.
    * The key for each object will be n
@@ -24,6 +36,10 @@ function returnTotal(objs) {
 }
 
 function printMoney(decimals) {
+  const deca = decimals.map((dec) => {
+    return `$${dec}`
+  })
+  let fixed = deca.tofixed(2)
   /**
    * @param decimals => [2.30, 2.40, 32.99]
    * Using .map, return an array of decimals formatted as dollars.
@@ -36,6 +52,9 @@ function printMoney(decimals) {
 }
 
 function returnAllTrueValues(values) {
+  let value = values.filter((val) => {
+    return val[1] === true;
+  })
   /**
    * @param values => [{name: 'Joe', happy:false}]
    * Using .filter, return an array of objects where happy equals true
@@ -43,6 +62,10 @@ function returnAllTrueValues(values) {
 }
 
 function addTwo(nums) {
+  let add = nums.map((num) => {
+    return num + 2
+  })
+  return add.reduce((a,b) => a + b)
   /**
    * @param nums => [1,2,3,4]
    * Using .reduce, return the total sum of all numbers.
@@ -53,6 +76,7 @@ function addTwo(nums) {
 }
 
 function joinStrings(strings) {
+  return strings.reduce((a,b) => a + b)
   /**
    * @param strings => ['g', 'f', 'z']
    * Using .reduce, return a new string containing each string from the strings array.
