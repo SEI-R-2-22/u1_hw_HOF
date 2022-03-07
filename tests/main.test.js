@@ -1,4 +1,4 @@
-const functions = require('../solution')
+const functions = require('../solution').default
 
 describe('printNums', () => {
   it('should return a new array with all numbers from the original array', () => {

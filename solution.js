@@ -1,38 +1,39 @@
 // You must RETURN your result in each function!
 
+{const printNums = [1, 2, 3, 4];
 
-let printNums = () => printNums.forEach((element) => {
-    return(element);
+let printNum = [];
 
-  let nums = [1, 2, 3, 4];
-  const newNum = nums.reduce(function(a, b) {
-    return a + b;
-  }, 0)
-
-console.log(newNum)
+printNums.forEach((printNum) => printNum
   /**
    *  Using .forEach, add each number in the nums array to a new array.
    * @param nums => [1,2,3,4]
    */
-})
+)
+}
 
-function returnSums(nums) {
+{const nums = [1, 2, 3, 4, 5];
 
-  let initialValue = 0;
-  let arr = nums.forEach((element) => {
-    return sum = arr.reduce(nums, element) => num + element, initialValue;
-})
+const newNums = [];
 
-console.log(sum);
-
+nums.forEach(function(num) {
+  newNums.push(num)
   /**
    * Using forEach, push the sum of n plus the index
    * to a new array and return the new array
    * @param nums => [1,2,3,4,5]
    */
+})
 }
 
-function returnTotal(objs) {
+
+{const returnTotals = [{n:1}];
+
+const newReturnTotals = []
+
+returnTotals.forEach(function(returnTotal) {
+  return(returnTotal)
+})
   /**
    * Using forEach return a number that is the total sum of all numbers in the array of objects.
    * The key for each object will be n
@@ -40,10 +41,9 @@ function returnTotal(objs) {
    */
 }
 
-const printMoney = () => {
-  const printMoneys = printMoney.map(() => {
-    const newMoney = ("$" + printMoney * 0.10)
-    return newMoney
+{const decimals = [2.30, 2.40, 32.99];
+
+decimals.map((decimal) => ("$" + decimal.toFixed(2))
 
   
   /**
@@ -55,31 +55,42 @@ const printMoney = () => {
    * }
    * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
    */
+)
 }
 
-  const values => {
-      let arr = values.filter((obj) => {
-        return obj.happy === 'true';
-      });
-      return obj.happy === 'true';
+
+{const values = [{name: 'Joe', happy:false}];
+
+const sum = values.filter(function(value) {
+  return value === 'happy';
+}) 
+
 
       /**
        * @param values => [{name: 'Joe', happy:false}]
        * Using .filter, return an array of objects where happy equals true
        */
-    }
-
-function addTwo(nums) {
-  /**
-   * @param nums => [1,2,3,4]
-   * Using .reduce, return the total sum of all numbers.
-   * Each number should have 2 added to it.
-   */
-  //   3
-  //   4 => 7
 }
 
-function joinStrings(strings) {
+{const newNums = [1, 2, 3, 4];
+
+  newNums.reduce(function(newNums, newNum) {
+      return (newNums + newNum);
+
+      /**
+       * @param nums => [1,2,3,4]
+       * Using .reduce, return the total sum of all numbers.
+       * Each number should have 2 added to it.
+       */
+      //   3
+      //   4 => 7
+},)
+}
+
+{const strings=['g', 'f', 'z'];
+let joinStrings = strings.reduce((strings, string) => {
+  return (strings + string);
+})
 
 
   /**
@@ -88,16 +99,23 @@ function joinStrings(strings) {
    */
 }
 
-//Bonus
-function sortObjectsByValue(objs) {
+{//Bonus
+  const objs = [{value: 1}, {value:2}, {value:23}];
+
+    objs.sort(function(a, b) {
+      return a - b;
+    });
+      console.log(objs); 
+    }
+
   /**
    * @param objs => [{value: 1}, {value:2}, {value:23}]
    * Using .sort, sort the array of objects by the value key in ascending order
    * .sort documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
    */
-}
 
-module.exports = {
+
+export default {
   printNums,
   returnSums,
   returnTotal,
