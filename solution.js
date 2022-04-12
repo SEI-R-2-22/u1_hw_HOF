@@ -1,62 +1,65 @@
 // You must RETURN your result in each function!
 
 function printNums(nums) {
-  /**
-   *  Using .forEach, add each number in the nums array to a new array.
-   * @param nums => [1,2,3,4]
-   */
+  let newNum = []
+  nums.forEach((value) => {
+    newNum.push(value)
+  })
+  return newNum
 }
 
 function returnSums(nums) {
-  /**
-   * Using forEach, push the sum of n plus the index
-   * to a new array and return the new array
-   * @param nums => [1,2,3,4,5]
-   */
+  let newArr = []
+  nums.map((n, index) => {
+    return n + index
+  }).forEach((value) => {
+    newArr.push(value)
+  })
+  return newArr
 }
 
-function returnTotal(objs) {
-  /**
-   * Using forEach return a number that is the total sum of all numbers in the array of objects.
-   * The key for each object will be n
-   * @param objs => [{n:1}]
-   */
+function returnTotal(objects) {
+  let newObjects = []
+  objects.forEach((num) => {
+    newObjects.push(num.n)
+  })
+  return newObjects.reduce((number, value) => {
+    return number + value
+  })
 }
 
 function printMoney(decimals) {
-  /**
-   * @param decimals => [2.30, 2.40, 32.99]
-   * Using .map, return an array of decimals formatted as dollars.
-   * EX: {
-   * input: [12.34, 9.99],
-   * output: ['$12.34', '$9.99']
-   * }
-   * Hint: Not all decimals have two places, make sure to return each decimal with the proper decimal places. .toFixed may be useful :)
-   */
+  let newMoney = []
+  decimals.forEach((elements) => {
+    newMoney.push(elements.toFixed(2))
+  })
+
+  return newMoney.map((value) => {
+    return '$' + value
+  })
 }
 
 function returnAllTrueValues(values) {
-  /**
-   * @param values => [{name: 'Joe', happy:false}]
-   * Using .filter, return an array of objects where happy equals true
-   */
+  let arr = values.filter((trueVals) => {
+    if (trueVals.happy === true) {
+      return trueVals
+    }
+  })
+  return arr
 }
 
 function addTwo(nums) {
-  /**
-   * @param nums => [1,2,3,4]
-   * Using .reduce, return the total sum of all numbers.
-   * Each number should have 2 added to it.
-   */
-  //   3
-  //   4 => 7
+  return nums.map((value) => {
+    return value + 2
+  }).reduce((first, second) => {
+    return first + second
+  })
 }
 
 function joinStrings(strings) {
-  /**
-   * @param strings => ['g', 'f', 'z']
-   * Using .reduce, return a new string containing each string from the strings array.
-   */
+  return strings.reduce((first, second) => {
+    return first + second
+  })
 }
 
 //Bonus
